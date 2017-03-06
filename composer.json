@@ -1,5 +1,5 @@
 {
-    "name": "lanin/laravel-api-exceptions",
+    "name": "dmavrin/laravel-api-exceptions",
     "description": "All in one solution for exception for JSON REST APIs on Laravel and Lumen.",
     "keywords": ["laravel", "framework", "api", "exceptions", "json"],
     "license": "MIT",

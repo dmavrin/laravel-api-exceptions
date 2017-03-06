@@ -66,7 +66,7 @@ abstract class ApiException extends IdException implements Jsonable, \JsonSerial
     {
         $e = $this;
 
-        if (env('APP_DEBUG') && $e instanceof ShowsPrevious && $this->getPrevious() !== null) {
+        if ($e instanceof ShowsPrevious && $this->getPrevious() !== null) {
             $e = $this->getPrevious();
         }
 
