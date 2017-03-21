@@ -71,18 +71,18 @@ abstract class ApiException extends IdException implements Jsonable, \JsonSerial
         }
 
         $return = [];
-        $return['id'] = $e instanceof IdException ? $e->getId() : snake_case(class_basename($e));
-        $return['message'] = $e->getMessage();
+        $return['error_id'] = $e instanceof IdException ? $e->getId() : snake_case(class_basename($e));
+        $return['error_message'] = $e->getMessage();
 
         if ($e instanceof ApiException) {
             $meta = $this->getMeta();
             if (! empty($meta)) {
-                $return['meta'] = $meta;
+                $return['error_meta'] = $meta;
             }
         }
 
         if (env('APP_DEBUG') && $this instanceof ShowsTrace) {
-            $return['trace'] = FlattenException::create($e)->getTrace();
+            $return['error_trace'] = FlattenException::create($e)->getTrace();
         }
 
         return $return;

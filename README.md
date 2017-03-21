@@ -40,8 +40,8 @@ Every ApiException can be thrown as a normal exception and they will be automati
 
 ```json
 {
-    "id": "not_found",
-    "message": "Requested object not found."
+    "error_id": "not_found",
+    "error_message": "Requested object not found."
 }
 ```
 
@@ -50,9 +50,9 @@ This object will be also populated with trace info, when `APP_DEBUG` is true.
 Also it can have `meta` attribute when there is additional info. For example for validation errors:
 ```json
 {
-	"id": "validation_failed",
-	"message": "Validation failed.",
-	"meta": {
+	"error_id": "validation_failed",
+	"error_message": "Validation failed.",
+	"error_meta": {
 		"errors": {
 			"tags": [{
 				"rule": "max.array",

@@ -8,6 +8,9 @@
             "name": "Maxim Lanin",
             "email": "max@lanin.me",
             "homepage": "https://blog.lanin.me"
+        },
+        {
+            "name": "David Mavrin"
         }
     ],
     "require": {
