@@ -52,7 +52,7 @@ class ValidationFailedApiException extends ApiException implements DontReport
         foreach ($this->errors as $field => $errors) {
             $return[$field] = [];
             foreach ($errors as $error) {
-                $return[$field][] = $error['message'];
+                $return[$field][] = $error;
             }
         }
 
